@@ -15,8 +15,5 @@ namespace LibraryManagement.Models
         public string? Author { get; set; }
         public string? Rack { get; set; }
 
-        public List<BookIssuanceHistory>? BookIssuanceHistory { get; set; }
-
-
     }
 }
