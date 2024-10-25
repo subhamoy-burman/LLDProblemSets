@@ -30,12 +30,12 @@ namespace LibraryManagement.Repositories
             throw new NotImplementedException();
         }
 
-        public void IssueBook(Book book)
+        public void IssueBook(Members member, Book book)
         {
             throw new NotImplementedException();
         }
 
-        public void ReturnBook(Book book)
+        public void ReturnBook(Members member, Book book)
         {
             throw new NotImplementedException();
         }
