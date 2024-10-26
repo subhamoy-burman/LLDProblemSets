@@ -20,34 +20,6 @@ namespace ParkingLot.Models
         public ParkingUnit ParkingUnit { get; set; }
         public VehiclePayment VehiclePayment { get; set; }
 
-        public void ParkTheCar(ParkingUnit parkingUnit)
-        {
-            this.ParkingUnit = parkingUnit;
-        }
-
-        public void EnterTheParkingLot(EntryPoint entryPoint)
-        {
-            this.EntryPoint = entryPoint;
-            this.VehicleEntryTime = DateTime.Now;
-        }
-
-        private int CalculatePayment(VehicleType vehicleType, ParkingUnitType parkingUnitType)
-        {
-            return 100;
-        }
-
-        public void MakePayment(PaymentMode paymentMode)
-        {
-            this.VehiclePayment = new VehiclePayment();
-        }
-
-        public void MakeExit(ExitPoint exitPoint)
-        {
-            //If payment done
-            this.ExitPoint = exitPoint as ExitPoint;
-        }
-
-
 
     }
 
