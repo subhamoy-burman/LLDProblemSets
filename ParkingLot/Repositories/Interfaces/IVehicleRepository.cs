@@ -11,7 +11,7 @@ namespace ParkingLot.Repositories.Interfaces
     {
         void ParkTheCar(ParkingUnit parkingUnit, Vehicle vehicle);
         void EnterTheParkingLot(EntryPoint entryPoint, Vehicle vehicle);
-        void MakePayment(PaymentMode paymentMode, Vehicle vehicle);
+        int GetPaymentAmount(Vehicle vehicle);
         void MakeExit(ExitPoint exitPoint, Vehicle vehicle);
 
     }

@@ -20,7 +20,7 @@ namespace ParkingLot.Repositories.Implementations
             throw new NotImplementedException();
         }
 
-        public void MakePayment(PaymentMode paymentMode, Vehicle vehicle)
+        public int GetPaymentAmount(Vehicle vehicle)
         {
             throw new NotImplementedException();
         }

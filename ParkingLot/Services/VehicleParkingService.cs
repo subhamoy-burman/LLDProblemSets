@@ -1,4 +1,5 @@
-﻿using ParkingLot.Models;
+﻿using ParkingLot.Infrastructure.Interface;
+using ParkingLot.Models;
 using ParkingLot.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -13,12 +14,14 @@ namespace ParkingLot.Services
         private readonly IParkingRepository _parkingRepository;
         private readonly IParkingUnitRepository _parkingUnitRepository;
         private readonly IVehicleRepository _vehicleRepository;
+        private readonly IPaymentService _paymentService;
         public VehicleParkingService(IParkingRepository parkingRepository, 
-            IParkingUnitRepository parkingUnitRepository, IVehicleRepository vehicleRepository)
+            IParkingUnitRepository parkingUnitRepository, IVehicleRepository vehicleRepository, IPaymentService paymentService)
         {
             _parkingRepository = parkingRepository;
             _parkingUnitRepository = parkingUnitRepository;
             _vehicleRepository = vehicleRepository;
+            _paymentService = paymentService;
         }
 
         public void ParkCar(ParkingUnit parkingUnit, Vehicle vehicle)
@@ -35,11 +38,13 @@ namespace ParkingLot.Services
         public void ExitParkingLot(ExitPoint exitPoint, Vehicle vehicle)
         {
             _vehicleRepository.MakeExit(exitPoint, vehicle);
+            _parkingUnitRepository.ReleaseParking(vehicle.ParkingUnit); // Not necessary as in Make Exit function only we can release the Parking spot
         }
 
         public void MakePayment(Vehicle vehicle, PaymentMode mode) {
 
-            _vehicleRepository.MakePayment(mode, vehicle);
+            IPaymentStrategy paymentStrategy = _paymentService.GetPaymentInterface(mode)!;
+            paymentStrategy.MakePayement(_vehicleRepository.GetPaymentAmount(vehicle));
         }
 
     }

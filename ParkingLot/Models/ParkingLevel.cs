@@ -11,11 +11,6 @@ namespace ParkingLot.Models
         public Guid ParkingLevelId { get; set; }
         public int ParkingLevelNumber { get; set; }
         public List<ParkingUnit> ParkingUnits { get; set; } = new List<ParkingUnit>();
-
-        public List<(VehicleType, int)> GetFreeParkingSpotForLevel()
-        {
-            return new List<(VehicleType, int)>();
-        }
         
     }
 
