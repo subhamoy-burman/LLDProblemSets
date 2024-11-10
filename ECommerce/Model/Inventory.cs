@@ -8,5 +8,7 @@ namespace ECommerce.Model
 {
     internal class Inventory
     {
+        public Guid ProductId { get; set; }
+        public int InventoryCount { get; set; }
     }
 }

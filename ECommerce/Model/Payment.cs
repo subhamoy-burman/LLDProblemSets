@@ -10,10 +10,13 @@ namespace ECommerce.Model
     {
         public Guid PaymentId { get; set; }
         public PaymentMode ModeOfPayment { get; set; }
+        public int Amount { get; set; }
     }
 
     public enum PaymentMode
     {
-        CASH, CREDIT_CARD, DEBIT_CARD
+        CASH, CREDIT_CARD, DEBIT_CARD, NEFT
     }
+
+
 }

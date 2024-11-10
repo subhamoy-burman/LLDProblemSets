@@ -8,5 +8,7 @@ namespace ECommerce.Model
 {
     internal class ProductCategory
     {
+        public Guid Id { get; set; }
+        public string ProductCategoryName { get; set; }
     }
 }

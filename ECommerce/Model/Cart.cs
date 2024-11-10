@@ -10,6 +10,7 @@ namespace ECommerce.Model
     {
         public Guid UserId { get; set; }
         public Guid CarId { get; set; }
-        public List<Product> CartProducts { get; set; }
+        public List<(Product,int)> CartProductsWithUnits { get; set; }
+        
     }
 }

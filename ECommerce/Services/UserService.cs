@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECommerce.Model
+namespace ECommerce.Services
 {
-    internal class SellerAccount : UserAccount
+    internal class UserService
     {
-        public string? GSTIN { get; set; }
     }
-
-
 }

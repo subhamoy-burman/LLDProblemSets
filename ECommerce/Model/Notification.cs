@@ -9,8 +9,8 @@ namespace ECommerce.Model
     internal class Notification
     {
         public Guid NotificationId { get; set; }
-        public string Content { get; set; }
-        public NotificationType MyProperty { get; set; }
+        public string? Content { get; set; }
+        public NotificationType NotificationType { get; set; }
     }
 
     public enum NotificationType

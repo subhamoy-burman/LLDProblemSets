@@ -14,5 +14,6 @@ namespace ECommerce.Model
         public ProductCategory ProductCategory { get; set; }
         public int UnitPrice { get; set; }
         public Inventory ProductInventory { get; set; }
+
     }
 }
