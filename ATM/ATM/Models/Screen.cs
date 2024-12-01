@@ -9,14 +9,6 @@ namespace ATM.Models
 {
     internal class Screen
     {
-        public void ProcessInput(ExpandoObject type)
-        {
-
-        }
-
-        public void ShowMessage(string message) { 
         
-
-        }
     }
 }

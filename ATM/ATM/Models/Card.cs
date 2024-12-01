@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace ATM.Models
 {
-    public class CardReader
+    public class Card
     {
-        public void ReadTheInsertedCard()
-        {
-
-
-        }
+        
     }
 }

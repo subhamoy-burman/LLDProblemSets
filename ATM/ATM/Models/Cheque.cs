@@ -11,7 +11,7 @@ namespace ATM.Models
         public Guid Id { get; set; }
         public int  ChequeNumber { get; set; }
         public int  CheckMoneraryAmount { get; set; }
-        public BankingCustomer? ChequeIssuedByCustomer { get; set; }
+        public BankingCustomer? ChequeIssuedBy { get; set; }
 
         /// <summary>
         /// Tuple would define Recievers Account Number, IFSC code, Bank Address

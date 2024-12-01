@@ -12,28 +12,5 @@ namespace ATM.Models
         public string BranchName { get; set; }
         = null!;
         public string IFSCCode { get; set; } = null!;
-
-        public void EnquireBalance()
-        {
-
-        }
-
-        public void WithdrawAmount(int amount)
-        {
-
-        }
-
-        public void DepositAmount(int amount) { 
-        
-        }
-
-        public void DepositCheck(Cheque cheque) {
-
-        }
-
-        public void TransferFund(RecieverAccountOfFund recieverAccount) { 
-        
-
-        }
     }
 }
